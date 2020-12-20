@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { COLORS } from "../../constants";
 import home from "../../Assets/icons/home.svg";
 
+import { Icon } from "../Icon";
 import { DesktopNav } from "./DesktopNav";
 import { DropdownMenu } from "./DropdownMenu";
 
@@ -26,8 +27,5 @@ const Wrapper = styled.header`
   justify-content: space-between;
   height: 56px;
   background-color: ${COLORS.background};
-`;
-
-const Icon = styled.img`
-  height: 36px;
+  border-bottom: 4px solid ${COLORS.passiveText};
 `;

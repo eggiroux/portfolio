@@ -11,26 +11,24 @@ export const Link = ({ href, children }) => {
 
 const Wrapper = styled.a`
   position: relative;
-  color: hsl(149deg, 46%, 55%);
-  margin-left: 16px;
+  color: inherit;
   box-sizing: border-box;
-
-  &:hover {
-    color: ${COLORS.highlightedText};
-  }
 
   &:hover > div {
     width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    margin-left: 16px;
   }
 `;
 
 const Underline = styled.div`
   position: relative;
-
   width: 0;
   height: 4px;
   background-color: ${COLORS.highlightedText};
-  transition: all 75ms;
+  transition: all 125ms;
 
   @media (max-width: 768px) {
     display: none;

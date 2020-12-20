@@ -12,6 +12,14 @@ export default createGlobalStyle`
     vertical-align: baseline;
     }
 
+  html, body  {
+    height: 100%;
+  }
+
+  #root {
+height: 100%;
+  }
+
     /* GLOBAL STYLES */
     *,
     *:before,
