@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { COLORS } from "../../constants";
+
 import { DesktopOnlyWrapper } from "../DesktopOnlyWrapper";
 import { Link } from "./Link";
 

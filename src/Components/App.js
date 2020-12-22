@@ -7,6 +7,7 @@ import { COLORS } from "../constants";
 import { TopBar } from "./TopBar";
 import { About } from "./About";
 import { Skills } from "./Skills";
+import { Projects } from "./Projects";
 
 export const App = () => {
   return (
@@ -15,6 +16,7 @@ export const App = () => {
       <TopBar />
       <About />
       <Skills />
+      <Projects />
     </Wrapper>
   );
 };

@@ -13,10 +13,10 @@ export const DropdownMenu = () => {
       <Icon src={menu} />
       <MenuItems>
         <Item>
-          <Link href="https://www.linkedin.com/in/egiroux/">Skills</Link>
+          <Link href="#skills">Skills</Link>
         </Item>
         <Item>
-          <Link href="https://www.linkedin.com/in/egiroux/">Projects</Link>
+          <Link href="#projects">Projects</Link>
         </Item>
         <Item>
           <Link>Contact</Link>
@@ -49,9 +49,11 @@ const MenuItems = styled.ul`
 const Item = styled.li`
   text-align: center;
   background-color: ${COLORS.background};
-  color: ${COLORS.passiveText};
   width: 100vw;
   padding-bottom: 8px;
+
+  color: ${COLORS.passiveText};
+
   &:hover {
     color: ${COLORS.highlightedText};
   }

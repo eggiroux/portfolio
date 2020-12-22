@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+import { COLORS } from "../constants";
+
 export default createGlobalStyle`
     html,
     body,
@@ -35,4 +37,15 @@ height: 100%;
     ol, ul {
         list-style: none;
     }
+
+    h1, 
+    h2, 
+    h3, 
+    h4, 
+    h5, 
+    p,
+    a {
+      color: ${COLORS.passiveText};
+    }
+
 `;

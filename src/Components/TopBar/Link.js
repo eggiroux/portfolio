@@ -11,8 +11,8 @@ export const Link = ({ href, children }) => {
 
 const Wrapper = styled.a`
   position: relative;
-  color: inherit;
   box-sizing: border-box;
+  color: inherit;
 
   &:hover > div {
     width: 100%;
@@ -20,6 +20,11 @@ const Wrapper = styled.a`
 
   @media (min-width: 768px) {
     margin-left: 16px;
+    color: ${COLORS.passiveText};
+
+    &:hover {
+      color: ${COLORS.highlightedText};
+    }
   }
 `;
 

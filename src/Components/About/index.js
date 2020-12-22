@@ -2,13 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 import avatarSrc from "../../Assets/img/portrait.jpeg";
+import linkedInSrc from "../../Assets/icons/Social/linkedin.svg";
+import gitHubSrc from "../../Assets/icons/Social/github.svg";
+import twitterSrc from "../../Assets/icons/Social/twitter.svg";
 
 import { COLORS } from "../../constants";
+import { MaxWidthWrapper } from "../MaxWidthWrapper";
 
 export const About = () => {
   return (
-    <Wrapper>
+    <Wrapper id={"about"}>
       <Header>Hi! I'm Etienne Giroux!</Header>
+      <Subtitle>Full Stack Developer</Subtitle>
+
       <Avatar />
       <Paragraph>
         I am a veteran game designer turned web developer. I come from 10+ years
@@ -24,6 +30,22 @@ export const About = () => {
         you also get — and I throw this in for free — a tried and true
         team-player and leader.
       </Paragraph>
+      <MaxWidthWrapper maxWidth={"400px"}>
+        <SocialLinks>
+          <SocialLink
+            target="_blank"
+            href="https://www.linkedin.com/in/egiroux/"
+          >
+            <Icon src={linkedInSrc} />
+          </SocialLink>
+          <SocialLink target="_blank" href="https://twitter.com/wargarine">
+            <Icon src={twitterSrc} />
+          </SocialLink>
+          <SocialLink target="_blank" href="https://github.com/eggiroux">
+            <Icon src={gitHubSrc} />
+          </SocialLink>
+        </SocialLinks>
+      </MaxWidthWrapper>
     </Wrapper>
   );
 };
@@ -46,15 +68,38 @@ const Avatar = styled.div`
 `;
 
 const Header = styled.h2`
-  color: ${COLORS.passiveText};
   text-align: center;
   font-size: 1.35rem;
-  margin-bottom: 32px;
+`;
+
+const Subtitle = styled.p`
+  margin-top: -16px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-style: italic;
 `;
 
 const Paragraph = styled.p`
-  color: ${COLORS.passiveText};
   text-align: left;
   font-size: 1.1rem;
   margin-top: 32px;
+`;
+const SocialLink = styled.a`
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: ${COLORS.passiveText};
+`;
+
+const Icon = styled.img`
+  height: 32px;
+  width: 32px;
+`;
+
+const SocialLinks = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 15px 0 30px;
 `;

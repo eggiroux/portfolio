@@ -10,12 +10,12 @@ import nodejs from "../../Assets/icons/Stack/nodejs.svg";
 import react from "../../Assets/icons/Stack/react.svg";
 import vscode from "../../Assets/icons/Stack/vscode.svg";
 
-import { SkillItem } from "./skillItem";
+import { SkillItem } from "./SkillItem";
 import { COLORS } from "../../constants";
 
 export const Skills = () => {
   return (
-    <Wrapper>
+    <Wrapper id={"skills"}>
       <Header>Skills</Header>
       <SkillList>
         <SkillItem iconSrc={javascript} name={"JavaScript"} />
